@@ -1,0 +1,230 @@
+/* Modern Contact Form Design */
+:root {
+  --primary-color: #4a90e2;
+  --secondary-color: #f5f6fa;
+  --accent-color: #ff5e62;
+  --text-dark: #2d3436;
+  --text-light: #636e72;
+  --white: #ffffff;
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.05);
+  --radius-lg: 20px;
+  --radius-md: 10px;
+}
+
+.contact-area {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-wrapper {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Contact Info Side (Left) */
+.contact-info-panel {
+  background: linear-gradient(135deg, #3a7bd5 0%, #3a6073 100%);
+  color: var(--white);
+  padding: 50px;
+  width: 40%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-info-panel h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+.contact-info-panel p.subtitle {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.info-item i {
+  font-size: 1.5rem;
+  margin-right: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.info-item h5 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: var(--white);
+  font-weight: 600;
+}
+
+.info-item p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Form Side (Right) */
+.contact-form-panel {
+  width: 60%;
+  padding: 50px;
+  background-color: var(--white);
+}
+
+.form-header h4 {
+  font-size: 1.8rem;
+  color: var(--text-dark);
+  font-weight: 700;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+.form-header h4::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--primary-color);
+  border-radius: 2px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.form-control-custom {
+  width: 100%;
+  padding: 15px 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  color: var(--text-dark);
+  transition: all 0.3s ease;
+  background: #f9f9f9;
+}
+
+.form-control-custom:focus {
+  border-color: var(--primary-color);
+  background: var(--white);
+  outline: none;
+  box-shadow: 0 4px 10px rgba(74, 144, 226, 0.1);
+}
+
+.form-label {
+  position: absolute;
+  left: 20px;
+  top: 17px;
+  color: var(--text-light);
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  background: transparent;
+  padding: 0 5px;
+}
+
+.form-control-custom:focus ~ .form-label,
+.form-control-custom:not(:placeholder-shown) ~ .form-label {
+  top: -10px;
+  left: 15px;
+  font-size: 0.8rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  background: var(--white);
+}
+
+textarea.form-control-custom {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.btn-submit {
+  background: linear-gradient(135deg, #4a90e2 0%, #007bff 100%);
+  color: var(--white);
+  padding: 15px 40px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(74, 144, 226, 0.4);
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(74, 144, 226, 0.5);
+}
+
+/* Branch Cards (Bottom) */
+.our-branches {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+
+.branch-card {
+  background: var(--white);
+  padding: 30px;
+  border-radius: var(--radius-md);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.branch-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.branch-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .contact-info-panel,
+  .contact-form-panel {
+    width: 100%;
+  }
+
+  .contact-info-panel {
+    padding: 40px 30px;
+  }
+
+  .contact-form-panel {
+    padding: 40px 30px;
+  }
+}
