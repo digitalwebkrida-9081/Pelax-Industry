@@ -74,24 +74,28 @@
         margin-bottom: 50px;
       }
     </style>
-  <link rel="stylesheet" href="css/home-revamp.css" />
+    <link rel="stylesheet" href="css/home-revamp.css" />
   </head>
   <body>
-            <header class="modern-header-container">
+    <header class="modern-header-container">
       <div class="header-top-bar">
         <div class="container-fluid">
           <div class="row align-items-center">
             <div class="col-md-5 col-12 text-md-left text-center">
-              <span class="top-contact-item"><i class="fa fa-phone"></i> +91 123 456 7890</span>
-              <span class="top-contact-item"><i class="fa fa-envelope"></i> info@pelaxindustries.com</span>
+              <span class="top-contact-item"
+                ><i class="fa fa-phone"></i> +91 123 456 7890</span
+              >
+              <span class="top-contact-item"
+                ><i class="fa fa-envelope"></i> info@pelaxindustries.com</span
+              >
             </div>
             <div class="col-md-7 d-none d-md-block text-right">
-               <div id="google_translate_element" class="d-inline-block mr-3" style="vertical-align: middle;"></div>
-              <div class="top-social-links d-inline-block">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-              </div>
+              <div
+                id="google_translate_element"
+                class="d-inline-block mr-3"
+                style="vertical-align: middle"
+              ></div>
+              <div class="top-social-links d-inline-block"></div>
             </div>
           </div>
         </div>
@@ -100,11 +104,7 @@
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="index.htm">
-              <img
-                src="img/logo/pelax-logo.png"
-                alt="Pelax Industries"
-                style="height: 60px"
-              />
+              <img src="img/logo/pelax-logo.png" alt="Pelax Industries" />
             </a>
             <button
               class="navbar-toggler"
@@ -574,7 +574,7 @@
       </div>
     </div>
 
-            <footer class="modern-footer">
+    <footer class="modern-footer">
       <div class="footer-top">
         <div class="container">
           <div class="row">
@@ -589,8 +589,9 @@
                 </a>
                 <p>
                   Pelax Industries is a leading government-recognized Two Star
-                  Export House in India. We bridge the gap between quality Indian
-                  manufacturing and global demand with integrity and excellence.
+                  Export House in India. We bridge the gap between quality
+                  Indian manufacturing and global demand with integrity and
+                  excellence.
                 </p>
                 <div class="footer-social-icons mt-4">
                   <a href="#"><i class="fa fa-facebook"></i></a>
@@ -675,29 +676,35 @@
     <script src="ajax/libs/lightgallery/1.7.0/js/lightgallery-all.min.js"></script>
     <script src="js/main.js"></script>
     <script src="https://kwes.io/v2/kwes-script.js" defer=""></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
         var currentLocation = location.href;
-        var menuItem = document.querySelectorAll('.navbar-nav a');
+        var menuItem = document.querySelectorAll(".navbar-nav a");
         var menuLength = menuItem.length;
         for (var i = 0; i < menuLength; i++) {
-            if (menuItem[i].href === currentLocation || menuItem[i].href === currentLocation.split('/').pop()) {
-                menuItem[i].parentElement.classList.add("active");
-            }
+          if (
+            menuItem[i].href === currentLocation ||
+            menuItem[i].href === currentLocation.split("/").pop()
+          ) {
+            menuItem[i].parentElement.classList.add("active");
+          }
         }
-    });
-</script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
         var currentLocation = location.href;
-        var menuItem = document.querySelectorAll('.navbar-nav a');
+        var menuItem = document.querySelectorAll(".navbar-nav a");
         var menuLength = menuItem.length;
         for (var i = 0; i < menuLength; i++) {
-            if (menuItem[i].href === currentLocation || menuItem[i].href === currentLocation.split('/').pop()) {
-                menuItem[i].parentElement.classList.add("active");
-            }
+          if (
+            menuItem[i].href === currentLocation ||
+            menuItem[i].href === currentLocation.split("/").pop()
+          ) {
+            menuItem[i].parentElement.classList.add("active");
+          }
         }
-    });
-</script>
-</body>
+      });
+    </script>
+  </body>
 </html>

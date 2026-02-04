@@ -69,9 +69,41 @@ h6 {
 .header-main-bar {
   padding: 0;
   background: var(--white);
-  position: sticky;
+  position: sticky; /* Keeps it in flow but sticks */
   top: 0;
   z-index: 1000;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Sticky Active State (Added by JS) */
+/* Sticky Active State (Added by JS) */
+.header-main-bar.sticky-active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 9999;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.header-main-bar.sticky-active .navbar {
+  padding: 5px 0 !important;
+  transition: padding 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.header-main-bar.sticky-active .navbar-brand img {
+  height: 60px !important;
+  transition: height 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Ensure smooth transition for these properties */
+.modern-header-container .navbar,
+.modern-header-container .navbar-brand img {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .modern-header-container .navbar {
@@ -79,7 +111,7 @@ h6 {
 }
 
 .modern-header-container .navbar-brand img {
-  height: 70px;
+  height: 90px;
   transition: var(--transition);
 }
 
@@ -104,7 +136,15 @@ h6 {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   padding: 15px;
-  margin-top: 15px;
+  margin-top: 0; /* Adjusted for hover */
+}
+
+/* Hover Dropdown Support */
+@media (min-width: 992px) {
+  .modern-header-container .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    animation: fadeInUp 0.3s ease-in-out;
+  }
 }
 
 .dropdown-item {
@@ -697,7 +737,13 @@ h6 {
     url("../img/banner/about-banner.jpg"); /* Reuse banner or placeholder */
   background-size: cover;
   background-position: center;
-  padding: 180px 0 100px;
+  /* padding: 180px 0 100px; */
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
   text-align: center;
   color: var(--white);
   margin-top: 0 !important;
@@ -710,7 +756,13 @@ h6 {
     url("../img/banner/certificate-banner-01.jpg");
   background-size: cover;
   background-position: center;
-  padding: 180px 0 100px;
+  /* padding: 180px 0 100px; */
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
   text-align: center;
   color: var(--white);
   margin-top: 0 !important;
@@ -722,7 +774,13 @@ h6 {
     url("../img/banner/blog-banner.jpg");
   background-size: cover;
   background-position: center;
-  padding: 180px 0 100px;
+  /* padding: 180px 0 100px; */
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
   text-align: center;
   color: var(--white);
   margin-top: 0 !important;
@@ -836,7 +894,13 @@ h6 {
     url("../img/banner/contact-banner.jpg");
   background-size: cover;
   background-position: center;
-  padding: 180px 0 100px;
+  /* padding: 180px 0 100px; */
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
   text-align: center;
   color: var(--white);
   margin-top: 0 !important;
